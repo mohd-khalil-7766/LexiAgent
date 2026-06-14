@@ -1,0 +1,335 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.playerCard,
+.controlCard,
+.wordInfoCard,
+.emptyCard {
+  padding: 28px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(6, 85, 83, 0.1);
+  box-shadow: 0 22px 60px rgba(9, 42, 45, 0.08);
+}
+
+.controlPanel {
+  display: grid;
+  gap: 20px;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  color: #087f75;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.playerTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.playerTop h2 {
+  margin: 0 0 10px;
+  color: #062f31;
+  font-size: clamp(54px, 7vw, 94px);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  font-weight: 950;
+}
+
+.playerTop p,
+.controlCard p,
+.wordInfoCard p,
+.emptyCard p {
+  margin: 0;
+  color: #5d7d80;
+  line-height: 1.7;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 220px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #dff7f3;
+  color: #006f63;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.progressBlock {
+  padding: 18px;
+  border-radius: 22px;
+  background: #f7fcfb;
+  border: 1px solid rgba(8, 127, 117, 0.12);
+  margin-bottom: 18px;
+}
+
+.progressBlock > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.progressBlock span {
+  color: #5d7d80;
+  font-weight: 850;
+}
+
+.progressBlock strong {
+  color: #08766e;
+  font-weight: 950;
+}
+
+.progressTrack {
+  height: 14px;
+  border-radius: 999px;
+  background: #e4f2f0;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #087f75, #20c7b2);
+  transition: width 0.25s ease;
+}
+
+.hiddenAnswerBox,
+.exampleBox,
+.meaningMini {
+  padding: 20px;
+  border-radius: 22px;
+  background: #f7fcfb;
+  border: 1px solid rgba(8, 127, 117, 0.12);
+  margin-bottom: 16px;
+}
+
+.hiddenAnswerBox span,
+.exampleBox span,
+.meaningMini span,
+.controlGrid span {
+  display: block;
+  margin-bottom: 8px;
+  color: #08766e;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hiddenAnswerBox p {
+  margin: 0;
+  color: #062f31;
+  font-size: 25px;
+  line-height: 1.65;
+  font-weight: 900;
+}
+
+.hiddenText {
+  color: #789295 !important;
+  font-weight: 750 !important;
+}
+
+.exampleBox p,
+.meaningMini p {
+  margin: 0;
+  color: #244f52;
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 800;
+}
+
+.audioButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.audioButtons button,
+.navigationRow button,
+.primaryButton,
+.secondaryButton {
+  min-height: 46px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-weight: 950;
+}
+
+.audioButtons button {
+  background: #e4f6f2;
+  color: #006f63;
+}
+
+.navigationRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.navigationRow button,
+.secondaryButton {
+  background: #f3f7f6;
+  color: #315f62;
+}
+
+.primaryButton {
+  background: #087f75;
+  color: #ffffff;
+}
+
+.controlCard h3,
+.wordInfoCard h3,
+.emptyCard h2 {
+  margin: 0 0 10px;
+  color: #062f31;
+  font-size: 30px;
+  line-height: 1.05;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.controlGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.controlGrid label {
+  display: grid;
+  gap: 8px;
+}
+
+.controlGrid select {
+  min-height: 50px;
+  padding: 0 14px;
+  border: 1px solid rgba(7, 112, 105, 0.18);
+  border-radius: 15px;
+  background: #ffffff;
+  color: #062f31;
+  font-weight: 850;
+  outline: none;
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.metaRow span {
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: #dff7f3;
+  color: #08766e;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.wordInfoCard a {
+  display: inline-flex;
+  margin-top: 4px;
+  color: #08766e;
+  font-weight: 950;
+}
+
+.emptyCard {
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+@media (max-width: 1120px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .playerTop {
+    flex-direction: column;
+  }
+
+  .controlGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .playerTop h2 {
+    font-size: 48px;
+  }
+
+  .reviewCountBox {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(8, 127, 117, 0.14);
+  margin-bottom: 18px;
+}
+
+.reviewCountBox span {
+  display: block;
+  margin-bottom: 6px;
+  color: #08766e;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.reviewCountBox strong {
+  display: block;
+  color: #062f31;
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.reviewCountBox p {
+  margin: 0;
+  color: #5d7d80;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: end;
+}
+
+@media (max-width: 760px) {
+  .reviewCountBox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reviewCountBox p {
+    text-align: start;
+  }
+}
+}

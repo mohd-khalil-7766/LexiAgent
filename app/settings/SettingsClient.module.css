@@ -1,0 +1,371 @@
+.settingsLayout {
+  display: grid;
+  gap: 24px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.preferenceCard,
+.heroCard,
+.scoreCard,
+.panelCard {
+  padding: 30px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(6, 85, 83, 0.1);
+  box-shadow: 0 22px 60px rgba(9, 42, 45, 0.08);
+}
+
+.preferenceCard {
+  display: grid;
+  gap: 26px;
+}
+
+.cardIntro {
+  display: grid;
+  gap: 10px;
+  max-width: 720px;
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  color: #087f75;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.preferenceCard h2,
+.heroCard h2,
+.scoreCard h2,
+.panelHeader h2 {
+  margin: 0 0 10px;
+  color: #062f31;
+  line-height: 1.12;
+  letter-spacing: -0.05em;
+  font-weight: 950;
+  text-wrap: balance;
+}
+
+.preferenceCard h2 {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+}
+
+.heroCard h2 {
+  font-size: clamp(2.2rem, 4.2vw, 3rem);
+}
+
+.scoreCard h2 {
+  font-size: clamp(3rem, 5vw, 4rem);
+}
+
+.panelHeader h2 {
+  font-size: 30px;
+}
+
+.preferenceCard p,
+.heroCard p,
+.scoreCard p,
+.integrationItem p {
+  margin: 0;
+  color: #5d7d80;
+  line-height: 1.8;
+  font-weight: 750;
+}
+
+.preferenceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.preferenceGrid section,
+.profileGrid div {
+  padding: 22px;
+  border-radius: 24px;
+  background: #f7fcfb;
+  border: 1px solid rgba(8, 127, 117, 0.12);
+}
+
+.preferenceGrid section > span,
+.profileGrid span {
+  display: block;
+  margin-bottom: 14px;
+  color: #08766e;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.optionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.optionRow button {
+  min-height: 48px;
+  min-width: 110px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #e4f6f2;
+  color: #006f63;
+  font-weight: 950;
+  border: 1px solid rgba(8, 127, 117, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.optionRow button.activeOption {
+  background: #087f75;
+  color: #ffffff;
+}
+
+.previewBox {
+  padding: 22px;
+  border-radius: 24px;
+  background: #062f31;
+  color: #dff7f3;
+}
+
+.previewBox strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 950;
+  line-height: 1.25;
+}
+
+.previewBox p {
+  color: #dff7f3;
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.profileGrid strong {
+  display: block;
+  color: #062f31;
+  font-size: 15px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.progressTrack {
+  height: 14px;
+  margin-top: 22px;
+  border-radius: 999px;
+  background: #e4f2f0;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #087f75, #20c7b2);
+  transition: width 0.25s ease;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.panelTitleGroup {
+  display: grid;
+  gap: 10px;
+  max-width: 620px;
+}
+
+.livePill,
+.readyPill,
+.missingPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.livePill,
+.readyPill {
+  background: #dff7f3;
+  color: #006f63;
+}
+
+.missingPill {
+  background: #fff1ed;
+  color: #b42318;
+}
+
+.integrationList,
+.commandList {
+  display: grid;
+  gap: 14px;
+}
+
+.integrationItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 18px;
+  border-radius: 20px;
+  background: #f7fcfb;
+  border: 1px solid rgba(8, 127, 117, 0.1);
+}
+
+.integrationItem strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #062f31;
+  font-size: 18px;
+  font-weight: 950;
+  line-height: 1.35;
+}
+
+.integrationItem small {
+  display: block;
+  margin-top: 8px;
+  color: #08766e;
+  font-weight: 850;
+  line-height: 1.6;
+}
+
+.commandButton {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  width: 100%;
+  padding: 17px;
+  border-radius: 20px;
+  background: #f7fcfb;
+  border: 1px solid rgba(8, 127, 117, 0.1);
+  color: #062f31;
+  text-align: start;
+}
+
+.commandButton code {
+  font-size: 14px;
+  font-weight: 850;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.6;
+}
+
+.commandButton span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: #dff7f3;
+  color: #08766e;
+  font-size: 12px;
+  font-weight: 950;
+  text-align: center;
+  white-space: nowrap;
+}
+
+:global(html[data-interface-language="zh"]) .kicker,
+:global(html[data-interface-language="zh"]) .preferenceGrid section > span,
+:global(html[data-interface-language="zh"]) .profileGrid span {
+  letter-spacing: 0.04em;
+}
+
+:global(html[data-interface-language="zh"]) .preferenceCard h2,
+:global(html[data-interface-language="zh"]) .heroCard h2,
+:global(html[data-interface-language="zh"]) .scoreCard h2,
+:global(html[data-interface-language="zh"]) .panelHeader h2 {
+  line-height: 1.18;
+}
+
+:global(html[data-interface-language="zh"]) .preferenceCard p,
+:global(html[data-interface-language="zh"]) .heroCard p,
+:global(html[data-interface-language="zh"]) .scoreCard p,
+:global(html[data-interface-language="zh"]) .integrationItem p,
+:global(html[data-interface-language="zh"]) .integrationItem small,
+:global(html[data-interface-language="zh"]) .commandButton code {
+  line-height: 1.85;
+}
+
+@media (max-width: 1180px) {
+  .topGrid,
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .profileGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .preferenceCard,
+  .heroCard,
+  .scoreCard,
+  .panelCard {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .preferenceGrid,
+  .profileGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .panelHeader,
+  .integrationItem,
+  .commandButton {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .preferenceCard h2,
+  .heroCard h2 {
+    font-size: 34px;
+  }
+
+  .scoreCard h2 {
+    font-size: 48px;
+  }
+
+  .optionRow button {
+    flex: 1 1 100%;
+  }
+}

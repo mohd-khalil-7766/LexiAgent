@@ -1,0 +1,461 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.quizCard,
+.emptyCard,
+.scoreCard,
+.reviewCard,
+.hiddenReviewCard,
+.examInfoCard {
+  padding: 28px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(6, 85, 83, 0.1);
+  box-shadow: 0 22px 60px rgba(9, 42, 45, 0.08);
+}
+
+.sidePanel {
+  display: grid;
+  gap: 20px;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  color: #087f75;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.quizTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.quizTop h2,
+.scoreCard h2,
+.reviewCard h3,
+.hiddenReviewCard h3,
+.examInfoCard h3,
+.emptyCard h2,
+.completeTitle {
+  margin: 0 0 10px;
+  color: #062f31;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.quizTop h2 {
+  font-size: 34px;
+}
+
+.scoreCard h2 {
+  font-size: 54px;
+}
+
+.reviewCard h3 {
+  font-size: 42px;
+}
+
+.hiddenReviewCard h3,
+.examInfoCard h3 {
+  font-size: 28px;
+}
+
+.quizTop p,
+.scoreCard p,
+.reviewCard p,
+.hiddenReviewCard p,
+.examInfoCard p,
+.emptyCard p,
+.completeText {
+  margin: 0;
+  color: #5d7d80;
+  line-height: 1.7;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #dff7f3;
+  color: #006f63;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.examControls {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(150px, 0.6fr) minmax(120px, 0.45fr);
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 22px;
+}
+
+.modeSwitch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.modeSwitch button,
+.startButton {
+  min-height: 46px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: #e8f4f2;
+  color: #315f62;
+  font-weight: 950;
+}
+
+.modeSwitch button.activeMode,
+.startButton {
+  background: #087f75;
+  color: #ffffff;
+}
+
+.sizeControl,
+.customControl {
+  display: grid;
+  gap: 8px;
+  color: #24575a;
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sizeControl select,
+.customControl input {
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid rgba(7, 112, 105, 0.18);
+  border-radius: 15px;
+  background: #ffffff;
+  color: #062f31;
+  font-weight: 850;
+  outline: none;
+}
+
+.questionBox {
+  padding: 22px;
+  border-radius: 24px;
+  background: #f7fcfb;
+  border: 1px solid rgba(8, 127, 117, 0.12);
+  margin-bottom: 16px;
+}
+
+.questionBox span,
+.meaningBox span,
+.exampleReview span {
+  display: block;
+  margin-bottom: 8px;
+  color: #08766e;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.questionBox h3 {
+  margin: 0;
+  color: #062f31;
+  font-size: 25px;
+  line-height: 1.35;
+}
+
+.sentence {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #244f52;
+  font-size: 19px;
+  line-height: 1.8;
+  font-weight: 850;
+}
+
+.audioRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.optionButton {
+  min-height: 70px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(7, 112, 105, 0.18);
+  background: #ffffff;
+  color: #062f31;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: start;
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+.optionButton:hover:not(:disabled) {
+  border-color: rgba(8, 127, 117, 0.5);
+  transform: translateY(-1px);
+}
+
+.optionButton span {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 11px;
+  background: #edf5f3;
+  color: #08766e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 950;
+}
+
+.optionButton strong {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.optionButton.selected {
+  background: #edf8f5;
+  border-color: #087f75;
+}
+
+.optionButton.correct {
+  background: #e9f8f0;
+  border-color: #12b76a;
+}
+
+.optionButton.correct span {
+  background: #12b76a;
+  color: white;
+}
+
+.optionButton.incorrect {
+  background: #fff0ee;
+  border-color: #f04438;
+}
+
+.optionButton.incorrect span {
+  background: #f04438;
+  color: white;
+}
+
+.feedback {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 20px;
+}
+
+.feedback strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.feedback p {
+  margin: 5px 0 0;
+  line-height: 1.6;
+}
+
+.good {
+  background: #e9f8f0;
+  color: #067647;
+}
+
+.bad {
+  background: #fff0ee;
+  color: #b42318;
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.primaryButton,
+.secondaryButton,
+.ghostButton {
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 16px;
+  font-weight: 950;
+}
+
+.primaryButton {
+  background: #087f75;
+  color: white;
+}
+
+.secondaryButton {
+  background: #e4f6f2;
+  color: #006f63;
+}
+
+.ghostButton {
+  background: #f3f7f6;
+  color: #315f62;
+}
+
+.progressTrack {
+  height: 14px;
+  margin-top: 18px;
+  border-radius: 999px;
+  background: #e4f2f0;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #087f75, #20c7b2);
+  transition: width 0.25s ease;
+}
+
+.wordMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.wordMeta span {
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: #dff7f3;
+  color: #08766e;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.meaningBox,
+.exampleReview {
+  padding: 18px;
+  border-radius: 20px;
+  background: #f7fcfb;
+  border: 1px solid rgba(8, 127, 117, 0.12);
+  margin-top: 14px;
+}
+
+.meaningBox p,
+.exampleReview p {
+  margin: 0;
+  color: #062f31;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 850;
+}
+
+.reviewCard a {
+  display: inline-flex;
+  margin-top: 18px;
+  color: #08766e;
+  font-weight: 950;
+}
+
+.hiddenReviewCard {
+  border-style: dashed;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.examInfoCard small {
+  display: block;
+  margin-top: 14px;
+  color: #789295;
+  font-weight: 800;
+}
+
+.finalStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.finalStats div {
+  padding: 18px;
+  border-radius: 20px;
+  background: #f7fcfb;
+  border: 1px solid rgba(8, 127, 117, 0.12);
+}
+
+.finalStats span {
+  display: block;
+  margin-bottom: 8px;
+  color: #08766e;
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.finalStats strong {
+  display: block;
+  color: #062f31;
+  font-size: 30px;
+  font-weight: 950;
+}
+
+.emptyCard {
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+@media (max-width: 1120px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .examControls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .quizTop {
+    flex-direction: column;
+  }
+
+  .optionsGrid,
+  .finalStats {
+    grid-template-columns: 1fr;
+  }
+
+  .scoreCard h2 {
+    font-size: 44px;
+  }
+
+  .reviewCard h3 {
+    font-size: 34px;
+  }
+}
