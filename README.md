@@ -53,6 +53,8 @@ SUPABASE_SECRET_KEY=your_supabase_service_key
 TAVILY_API_KEY=your_tavily_api_key
 OPENROUTER_API_KEY=your_openrouter_api_key
 OPENROUTER_MODEL=your_openrouter_model
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+TELEGRAM_WEBHOOK_SECRET=your_webhook_secret
 ```
 
 ## Vercel Deployment
@@ -91,12 +93,28 @@ In Vercel Project Settings -> Environment Variables, add:
 - `TAVILY_API_KEY`
 - `OPENROUTER_API_KEY`
 - `OPENROUTER_MODEL`
+- `TELEGRAM_BOT_TOKEN`
+- `TELEGRAM_WEBHOOK_SECRET`
 
 Do not paste example or public template keys into production.
 
 ### 5. Deploy
 
 After saving the variables, trigger the deployment.
+
+### 6. Set the Telegram webhook
+
+After Vercel is deployed, set the Telegram webhook to your production route:
+
+```bash
+https://your-vercel-domain/api/telegram/webhook
+```
+
+Example Telegram Bot API request shape:
+
+```bash
+https://api.telegram.org/bot<your_telegram_bot_token>/setWebhook?url=https://your-vercel-domain/api/telegram/webhook&secret_token=your_webhook_secret
+```
 
 ## Deployment Notes
 
