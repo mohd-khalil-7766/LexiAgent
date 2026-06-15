@@ -104,7 +104,7 @@ async function callAgentSearch(origin: string, word: string) {
     body: JSON.stringify({
       word,
       learningLanguage: "en",
-      explanationLanguage: "en",
+      explanationLanguage: "zh",
       channel: "telegram",
     }),
     cache: "no-store",
